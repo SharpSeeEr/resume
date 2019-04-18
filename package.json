@@ -1,0 +1,27 @@
+{
+  "name": "resume",
+  "version": "1.0.0",
+  "description": "Personal Resume for Aaron Throckmorton",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SharpSeeEr/resume.git"
+  },
+  "keywords": [
+    "Aaron",
+    "Throckmorton",
+    "Senior",
+    "Software",
+    "Development",
+    "Engineer"
+  ],
+  "author": "Aaron Throckmorton",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/SharpSeeEr/resume/issues"
+  },
+  "homepage": "https://github.com/SharpSeeEr/resume#readme"
+}
