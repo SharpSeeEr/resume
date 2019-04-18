@@ -3,6 +3,10 @@ body {
   font-size: 14px;
 }
 
+p, ul {
+  line-height: 1.5em;
+}
+
 .container {
   max-width: 990px;
   box-shadow: rgba(0, 0, 0, 0.25) 0px 5px 25px 0px;
@@ -54,6 +58,14 @@ h1 .far, h1 .fas, h2 .far, h2 .fas, h3 .far, h3 .fas, h4 .far, h4 .fas, title .f
   margin-right: 0.3em;
 }
 
+a {
+  color: #222;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+
 .title {
   font-size: 3em;
   margin-bottom: 0.5rem;
@@ -69,7 +81,7 @@ h1 .far, h1 .fas, h2 .far, h2 .fas, h3 .far, h3 .fas, h4 .far, h4 .fas, title .f
 .section + .section {
   margin-top: 2rem;
 }
-.section .header {
+.section .heading {
   padding-bottom: 0.4em;
   border-bottom: 1px solid #ddd;
 }
@@ -82,6 +94,7 @@ h1 .far, h1 .fas, h2 .far, h2 .fas, h3 .far, h3 .fas, h4 .far, h4 .fas, title .f
 }
 .experience .dates {
   flex-shrink: 1;
+  min-width: 90px;
   white-space: nowrap;
   font-weight: bold;
   line-height: 1.75em;
@@ -99,6 +112,12 @@ h1 .far, h1 .fas, h2 .far, h2 .fas, h3 .far, h3 .fas, h4 .far, h4 .fas, title .f
   font-style: italic;
   margin-bottom: 0.5em;
 }
+.experience .details ul.description {
+  padding-inline-start: 1.5em;
+  margin-block-start: 0;
+  margin-block-end: 0;
+}
+
 .personal-info + .personal-info {
   margin-top: 1rem;
 }
@@ -108,6 +127,36 @@ h1 .far, h1 .fas, h2 .far, h2 .fas, h3 .far, h3 .fas, h4 .far, h4 .fas, title .f
 .personal-info .label {
   font-weight: bold;
   margin-bottom: 0.2em;
+}
+
+.skill {
+  display: flex;
+}
+.skill .name {
+  flex-grow: 1;
+}
+
+.rating div {
+  width: 1em;
+  height: 1em;
+  display: inline-block;
+  margin-right: 0.1em;
+  background-color: #ddd;
+}
+.rating.one div:nth-child(-n+1) {
+  background-color: #003D74;
+}
+.rating.two div:nth-child(-n+2) {
+  background-color: #003D74;
+}
+.rating.three div:nth-child(-n+3) {
+  background-color: #003D74;
+}
+.rating.four div:nth-child(-n+4) {
+  background-color: #003D74;
+}
+.rating.five div:nth-child(-n+5) {
+  background-color: #003D74;
 }
 
 /*# sourceMappingURL=resume.css.map */

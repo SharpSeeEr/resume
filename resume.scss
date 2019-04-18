@@ -12,6 +12,9 @@ $gutter: 1rem;
 
 $debug-border: 0px solid silver;
 
+p, ul {
+  line-height: 1.5em;
+}
 .container {
   max-width: 990px;
   box-shadow: rgba(0, 0, 0, 0.25) 0px 5px 25px 0px;
@@ -71,6 +74,14 @@ h1, h2, h3, h4, title {
   }
 }
 
+a {
+  color: $color;
+  text-decoration: none;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
 .title {
   @extend %headers;
   font-size: 3em;
@@ -84,12 +95,16 @@ h1, h2, h3, h4, title {
   margin-bottom: $gutter;
 }
 
+.header {
+  .summary {
+  }
+}
 .section {
   +.section {
     margin-top: $gutter * 2;
   }
 
-  .header {
+  .heading {
     padding-bottom: .4em;
     border-bottom: 1px solid #ddd;
   }
@@ -103,7 +118,7 @@ h1, h2, h3, h4, title {
   }
   .dates {
     flex-shrink: 1;
-    // min-width: 100px;
+    min-width: 90px;
     white-space: nowrap;
     font-weight: bold;
     line-height: 1.75em;
@@ -122,7 +137,10 @@ h1, h2, h3, h4, title {
       font-style: italic;
       margin-bottom: .5em;
     }
-    .description {
+    ul.description {
+        padding-inline-start: 1.5em;
+        margin-block-start: 0;
+        margin-block-end: 0;
     }
   }
 }
@@ -138,4 +156,66 @@ h1, h2, h3, h4, title {
     font-weight: bold;
     margin-bottom: .2em;
   }
+}
+
+@mixin ratingblock($selector, $value) {
+  &.#{$selector} div:nth-child(-n+#{$value}) {
+    background-color: $header-color;
+  }
+}
+
+.skill {
+  display: flex;
+  .name {
+    flex-grow: 1;
+  }
+
+  // > div {
+
+  //   display: inline-block;
+  //   vertical-align: top;
+  //   // width: 50%;
+  //   &.name {
+  //     margin-right: .5em;
+  //     width:
+  //   }
+  // }
+}
+.rating {
+  div {
+    width: 1em;
+    height: 1em;
+    display: inline-block;
+    margin-right: .1em;
+    background-color: #ddd;
+  }
+  @include ratingblock(one, 1);
+  @include ratingblock(two, 2);
+  @include ratingblock(three, 3);
+  @include ratingblock(four, 4);
+  @include ratingblock(five, 5);
+
+  // &.one {
+  //   div:nth-child(-n+1) {
+
+  //   }
+  // }
+  // &.two {
+  //   div:nth-child(-n+1) {
+
+  //   }
+  // }
+  // &.three {
+  //   div:nth-child(-n+1) {
+
+  //   }
+  // }
+  // &.four {
+  //   div:nth-child(-n+1) {
+
+  //   }
+  // }
+  // &.five {
+  //   background-color:
+  // }
 }
