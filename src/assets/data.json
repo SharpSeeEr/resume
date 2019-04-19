@@ -15,8 +15,16 @@
       "position": "Senior Software Development Engineer",
       "description": [
         {
-          "format": "p",
-          "items": ["Build custom business workflow applications to streamline, manage, and automate business processes"]
+          "format": "ul",
+          "items": [
+            "Build custom business workflow applications to streamline, manage, and automate business processes.",
+            "Migrated client data from MS Access to MS SQL Server and created a new application interface using ASP.Net Core and Vue.js, streamlining the clients business process.",
+            "Created a loan servicing processing module specific to the clients needs using Python.",
+            "Modified Chocolately packages for Keepass and Git to provide custom functionality.  Submitted pull requests were accepted by the maintainers.",
+            "Created a custom Clock Picker component for Buefy, a Vue.js component library for the Bulma CSS library, which is now included in the Buefy library.",
+            "Published a NuGet package with Entity Framework classes and extensions used across multiple projects.",
+            ""
+          ]
         }
       ]
     },
@@ -30,7 +38,58 @@
           "format": "ul",
           "items": [
             "Design, develop, maintain, and support several internal web applications for the IT support group",
-            "Provide guidance to other developers on team, teaching programming patterns, anti-patterns, and dubugging techniques, and giving general help and direction"
+            "Provide guidance to other developers on team, teaching programming patterns, anti-patterns, and dubugging techniques, and giving general help and direction",
+            "Led weekly and as needed development team meetings to review code and provide help to team mates.",
+            "Designed and developed an IT server management system to manage over 30,000 Windows servers. A set of backend services updated system information and deployed configuration and change jobs. A web front end provided IT techs to view server information, create jobs to make changes, and review the results of those jobs.",
+            "Developed an application to consolidate asset information from several separate sources enabling access to all data from one interface.",
+            "Created a change management system for end users to request updates to asset data.  The application requested approval from appropriate parties before automatically applying the changes, replacing a manual tracking process requiring several weeks per change, with the new system requiring only a few days."
+          ]
+        }
+      ]
+    },
+    {
+      "startYear": "2008",
+      "endYear": "2011",
+      "company": "Wells Fargo Securities",
+      "position": "Systems Administrator",
+      "description": [
+        {
+          "format": "ul",
+          "items": [
+            "Provided desktop, laptop, and server support for 60 users across 8 geographic locations",
+            "Includied new system setup, server maintenance and backups, break/fix issues, security policy compliance and remediation.",
+            "Managed Active Directory, file and print servers, and MS SQL database servers.",
+            "Created a custom program to help manage monthly updates."
+          ]
+        }
+      ]
+    },
+    {
+      "startYear": "1999",
+      "endYear": "2008",
+      "company": "Wells Fargo Bank & Company",
+      "position": "Systems Engineer",
+      "description": [
+        {
+          "format": "ul",
+          "items": [
+            "Responsible for designing, sizing, and installing systems for assigned projects, and ensuring tech personnel received proper training for supporting them.",
+            "Escalation point for over 40 on site technicians located across 15 locations"
+          ]
+        }
+      ]
+    },
+    {
+      "startYear": "1992",
+      "endYear": "1999",
+      "company": "United States Air Force",
+      "position": "Computer Maintenance Technician",
+      "description": [
+        {
+          "format": "ul",
+          "items": [
+            "Maintained all audio, video, and computer equipment in the United States StratCom underground command center in Omaha, NE.",
+            "Required a Top Secret SCI security clearance."
           ]
         }
       ]
@@ -39,9 +98,11 @@
   "skills": [
     { "skill": "C#", "rating": 5 },
     { "skill": "MS SQL Server", "rating": 4 },
+    { "skill": "SCSS", "rating": 4 },
     { "skill": "JavaScript", "rating": 4 },
     { "skill": "Vue.js", "rating": 4 },
     { "skill": "Python", "rating": 3 },
-    { "skill": "git", "rating": 3 }
+    { "skill": "Git", "rating": 3 },
+    { "skill": "Angular", "rating": 1 }
   ]
 }
