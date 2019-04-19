@@ -1,0 +1,215 @@
+
+@import 'normalize';
+
+/***********************************************************
+Variables
+***********************************************************/
+$color: #222;
+$inverse-color: #fff;
+$header-color: #003D74;
+
+$gutter: 1rem;
+
+$debug-border: 0px solid silver;
+
+/***********************************************************
+Element styling
+***********************************************************/
+
+body {
+  font-family: 'Roboto', Arial, Helvetica, sans-serif;
+  font-size: 14px;
+}
+
+p, ul {
+  line-height: 1.5em;
+}
+
+%headers {
+  font-family: 'Open Sans', sans-serif;
+  color: $header-color;
+
+}
+
+h1, h2, h3, h4, h5, h6 {
+  @extend %headers;
+  &:first-child {
+    margin-top: 0;
+  }
+  // Icons in a header are shown in reverse color
+  .far, .fas {
+    background-color: $header-color;
+    color: $inverse-color;
+    padding: 0.3em;
+    width: 1em;
+    height: 1em;
+    text-align: center;
+    margin-right: .3em;
+  }
+}
+
+/*
+ * Because this is meant to look like a printed document,
+ * Links appear as normal text, hovering shows line
+ */
+a {
+  color: $color;
+  text-decoration: none;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+/***********************************************************
+Layout
+***********************************************************/
+.container {
+  max-width: 990px;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 5px 25px 0px;
+  margin: 1rem auto;
+  min-height: 90vh;
+  padding: $gutter * 2;
+}
+
+.columns {
+  display: flex;
+  position: relative;
+  flex-direction: rows;
+
+  >.column {
+    flex-grow: 1;
+    border: $debug-border;
+    padding: $gutter;
+    &:first-child {
+      padding-left: 0;
+    }
+    &:last-child {
+      padding-right: 0;
+    }
+    &.is-three-quarter {
+      flex-grow: 0;
+      width: 75%;
+    }
+    &.is-right {
+      width: 25%;
+      flex-grow: 0;
+    }
+  }
+}
+
+.section {
+  +.section {
+    margin-top: $gutter * 2;
+  }
+
+  .heading {
+    padding-bottom: .4em;
+    border-bottom: 1px solid #ddd;
+  }
+}
+
+/***********************************************************
+Resume section formatting
+***********************************************************/
+.title {
+  @extend %headers;
+  font-size: 3em;
+  margin-bottom: $gutter / 2;
+}
+.subtitle {
+  @extend %headers;
+  font-size: 1.7em;
+  font-weight: 500;
+  margin-top: 0;
+  margin-bottom: $gutter;
+}
+
+.header {
+  .summary {
+  }
+}
+
+.experience {
+  display: flex;
+
+  +.experience {
+    margin-top: $gutter;
+  }
+  .dates {
+    flex-shrink: 1;
+    min-width: 90px;
+    white-space: nowrap;
+    font-weight: bold;
+    line-height: 1.75em;
+    // margin-right: $gutter;
+  }
+
+  .details {
+    margin-left: $gutter;
+    .position {
+      color: $color;
+      font-size: 1.4em;
+      margin-bottom: .25em;
+    }
+    .company {
+      font-size: 1.1em;
+      font-style: italic;
+      margin-bottom: .5em;
+    }
+    ul.description {
+        padding-inline-start: 1.5em;
+        margin-block-start: 0;
+        margin-block-end: 0;
+    }
+  }
+}
+
+.personal-info {
+  +.personal-info {
+    margin-top: $gutter;
+  }
+  p {
+    margin: 0;
+  }
+  .label {
+    font-weight: bold;
+    margin-bottom: .2em;
+  }
+}
+
+.skill {
+  margin-bottom: .5em;
+
+  .skill-main {
+    display: flex;
+    .name {
+      flex-grow: 1;
+    }
+  }
+}
+
+@mixin ratingblock($selector, $value) {
+  &.rating-#{$selector} div:nth-child(-n+#{$value}) {
+    background-color: $header-color;
+  }
+}
+
+.rating {
+  div {
+    width: 1em;
+    height: 1em;
+    display: inline-block;
+    margin-right: 3px;
+    background-color: #ddd;
+  }
+  @include ratingblock(one, 1);
+  @include ratingblock(two, 2);
+  @include ratingblock(three, 3);
+  @include ratingblock(four, 4);
+  @include ratingblock(five, 5);
+}
+
+.rating-display {
+  text-align: right;
+  font-size: .8em;
+}

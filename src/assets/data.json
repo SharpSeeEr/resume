@@ -1,0 +1,47 @@
+{
+  "name": "Aaron Throckmorton",
+  "title": "Senior Software Engineer",
+  "summary": "(Example Summary) Multi-tasking Admin Assistant with +2 years of experience in the retail real-estate industry. Can manage +3 executive schedules. Looking to leverage proven communication, travel planning, and email management skill in the position of Administrative Assistant at Acme.",
+  "personalInfo": [
+    { "label": "Phone", "value": "(801) 882-9706" },
+    { "label": "E-mail", "value": "aaron@throckmortons.com", "link": "mailto" },
+    { "label": "LinkedIn", "value": "linkedin.com/in/aaronthrockmorton/", "link": "https://linkedin.com/in/aaronthrockmorton/" }
+  ],
+  "experience": [
+    {
+      "startYear": "2017",
+      "endYear": "",
+      "company": "SharpSeer Group, Inc.",
+      "position": "Senior Software Development Engineer",
+      "description": [
+        {
+          "format": "p",
+          "items": ["Build custom business workflow applications to streamline, manage, and automate business processes"]
+        }
+      ]
+    },
+    {
+      "startYear": "2011",
+      "endYear": "2017",
+      "company": "Wells Fargo Bank, N. A.",
+      "position": "Senior Developer",
+      "description": [
+        {
+          "format": "ul",
+          "items": [
+            "Design, develop, maintain, and support several internal web applications for the IT support group",
+            "Provide guidance to other developers on team, teaching programming patterns, anti-patterns, and dubugging techniques, and giving general help and direction"
+          ]
+        }
+      ]
+    }
+  ],
+  "skills": [
+    { "skill": "C#", "rating": 5 },
+    { "skill": "MS SQL Server", "rating": 4 },
+    { "skill": "JavaScript", "rating": 4 },
+    { "skill": "Vue.js", "rating": 4 },
+    { "skill": "Python", "rating": 3 },
+    { "skill": "git", "rating": 3 }
+  ]
+}
