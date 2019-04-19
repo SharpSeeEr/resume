@@ -4,25 +4,43 @@
 /***********************************************************
 Variables
 ***********************************************************/
+//$media-mobile: 768px;
+$media-tablet: 768px;
+
 $font: 'Roboto', Arial, Helvetica, sans-serif;
-$color: #222;
 $base-font-size: 14px;
 $line-height: 1.15em;
 $content-line-height: 1.5em;
-$header-font: 'Open Sans', sans-serif;
-$header-color: #003D74;
 
+$header-font: 'Open Sans', sans-serif;
+
+$color: #222;
+$background-color: #fff;
 $inverse-color: #fff;
 
-$gutter: 1rem;
+$header-color: #003D74;
+$header-background-color: $background-color;
 
-$debug-border: 0px solid silver;
+$gutter: 1rem;
+$vertical-spacing: 1.5em;
+
+$title-size: 3em;
+$subtitle-size: 1.7em;
+
+$debug-border: 0px solid #0c0;
+
+$xp-position-line-height: 1.5rem;
+
+$section-header-icon-color: $header-background-color;
+$section-header-icon-background-color: $header-color;
 
 /***********************************************************
 Element styling
 ***********************************************************/
 
 body {
+  color: $color;
+  background-color: $background-color;
   font-family: $font;
   font-size: $base-font-size;
   line-height: $line-height;
@@ -30,11 +48,13 @@ body {
 
 p, ul {
   line-height: $content-line-height;
+  margin: 0 0 .25em;
 }
 
 %headers {
-  font-family: 'Open Sans', sans-serif;
+  font-family: $header-font;
   color: $header-color;
+  background-color: $header-background-color;
   line-height: $line-height;
 }
 
@@ -43,16 +63,7 @@ h1, h2, h3, h4, h5, h6 {
   &:first-child {
     margin-top: 0;
   }
-  // Icons in a header are shown in reverse color
-  .far, .fas {
-    background-color: $header-color;
-    color: $inverse-color;
-    padding: 0.3em;
-    width: 1em;
-    height: 1em;
-    text-align: center;
-    margin-right: .3em;
-  }
+
 }
 
 /*
@@ -71,47 +82,40 @@ a {
 Layout
 ***********************************************************/
 .container {
-  max-width: 990px;
-  box-shadow: rgba(0, 0, 0, 0.25) 0px 5px 25px 0px;
-  margin: 1rem auto;
-  min-height: 90vh;
   padding: $gutter * 2;
 }
 
 .columns {
   display: flex;
   position: relative;
-  flex-direction: rows;
+  flex-direction: column;
 
   >.column {
     flex-grow: 1;
     border: $debug-border;
-    padding: $gutter;
-    &:first-child {
-      padding-left: 0;
-    }
-    &:last-child {
-      padding-right: 0;
-    }
-    &.is-three-quarter {
-      flex-grow: 0;
-      width: 75%;
-    }
-    &.is-right {
-      width: 25%;
-      flex-grow: 0;
-    }
+  }
+  .column-side {
+    min-width: 240px;
   }
 }
 
 .section {
-  +.section {
-    margin-top: $gutter * 2;
-  }
+  margin-top: $vertical-spacing;
 
   .heading {
     padding-bottom: .4em;
     border-bottom: 1px solid #ddd;
+
+    // Icons in a header are shown in reverse color
+    .far, .fas {
+      background-color: $section-header-icon-background-color;
+      color: $section-header-icon-color;
+      padding: 0.3em;
+      width: 1em;
+      height: 1em;
+      text-align: center;
+      margin-right: .3em;
+    }
   }
 }
 
@@ -120,35 +124,32 @@ Resume section formatting
 ***********************************************************/
 .title {
   @extend %headers;
-  font-size: 3em;
+  font-size: $title-size;
   margin-bottom: $gutter / 2;
 }
 .subtitle {
   @extend %headers;
-  font-size: 1.7em;
+  font-size: $subtitle-size;
   font-weight: 500;
   margin-top: 0;
   margin-bottom: $gutter;
 }
 
-.header {
-  .summary {
-  }
-}
-
 .experience {
   display: flex;
+  // flex-direction: column;
 
   +.experience {
-    margin-top: $gutter;
+    margin-top: $vertical-spacing;
   }
   .dates {
     flex-shrink: 1;
-    min-width: 90px;
-    white-space: nowrap;
-    font-weight: bold;
-    line-height: 1.75em;
-    // margin-right: $gutter;
+    min-width: 4em;
+    max-width: 4em;
+    > div {
+      font-weight: bold;
+      line-height: $xp-position-line-height;
+    }
   }
 
   .details {
@@ -156,12 +157,14 @@ Resume section formatting
     .position {
       color: $color;
       font-size: 1.4em;
+      line-height: $xp-position-line-height;
       margin-bottom: .25em;
+      // border: 1px solid #0c0;
     }
     .company {
       font-size: 1.1em;
       font-style: italic;
-      margin-bottom: .5em;
+      margin-bottom: .75em;
     }
     ul.description {
         padding-inline-start: 1.5em;
@@ -184,15 +187,14 @@ Resume section formatting
   }
 }
 
+.skills {
+  max-width: 250px;
+}
+
 .skill {
   margin-bottom: .5em;
-
-  .skill-main {
-    display: flex;
-    .name {
-      flex-grow: 1;
-    }
-  }
+  display: flex;
+  justify-content: space-between;
 }
 
 @mixin ratingblock($selector, $value) {
@@ -201,7 +203,7 @@ Resume section formatting
   }
 }
 
-.rating {
+.rating-graphic {
   div {
     width: 1em;
     height: 1em;
@@ -219,4 +221,70 @@ Resume section formatting
 .rating-display {
   text-align: right;
   font-size: .8em;
+}
+
+@media ( min-width: 550px ) and ( max-width: $media-tablet - 1 ) {
+  .column-side {
+    display: flex;
+    > div {
+      flex-grow: 1;
+
+      +div {
+        margin-left: $gutter * 2;
+      }
+    }
+  }
+}
+@media ( min-width: $media-tablet ) {
+  .container {
+    max-width: 990px;
+    min-height: calc(100vh - 2rem - 60px);
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 5px 25px 0px;
+    margin: 1em auto;
+  }
+
+  .columns {
+    flex-direction: row;
+
+    >.column {
+      // padding-left: $gutter;
+      // padding-right: $gutter;
+      +.column {
+        margin-left: $gutter * 2;
+      }
+      &.column-main {
+        // flex-grow: 0;
+        width: 75%;
+      }
+      &.column-side {
+        width: 25%;
+        // flex-grow: 0;
+      }
+    }
+  }
+
+  .experience {
+    flex-direction: row;
+
+    .dates {
+      min-width: 90px;
+      > div {
+        white-space: nowrap;
+        // font-weight: bold;
+        // line-height: $xp-position-line-height;
+        // margin-right: $gutter;
+        // border: 1px solid #0c0;
+      }
+    }
+  }
+}
+
+@media print {
+  body {
+    font-size: 12px;
+  }
+
+  .rating-graphic {
+    display: none;
+  }
 }

@@ -1,12 +1,14 @@
 <template>
   <div class="skill">
-    <div class="skill-main">
-      <div class="name">{{skill}}</div>
-      <div class="rating" :class="ratingClass">
+
+    <div class="name">{{skill}}</div>
+    <div class="rating">
+      <div class="rating-graphic" :class="ratingClass">
         <div></div><div></div><div></div><div></div><div></div>
       </div>
+      <div class="rating-display">{{ratingDesc}}</div>
     </div>
-    <div class="rating-display">{{ratingDesc}}</div>
+
   </div>
 </template>
 

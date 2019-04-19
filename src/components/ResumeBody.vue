@@ -9,13 +9,15 @@
     </div>
 
     <div class="columns">
-      <div class="column is-three-quarter">
+      <div class="column column-main">
         <div class="section">
           <h2 class="heading">
             <span class="fas fa-briefcase"></span> Experience
           </h2>
           <div v-for="(item, index) in experience" :key="index" class="experience">
-            <div class="dates">{{item.startYear}} - {{item.endYear || 'present'}}</div>
+            <div class="dates">
+              <div>{{item.startYear}} - {{item.endYear || 'present'}}</div>
+            </div>
             <div class="details">
               <h3 class="position">{{item.position}}</h3>
               <div class="company">{{item.company}}</div>
@@ -25,7 +27,7 @@
         </div>
       </div>
 
-      <div class="column is-right">
+      <div class="column column-side">
         <div class="section">
           <h2 class="heading">
             <span class="fas fa-user"></span>Personal Info
@@ -37,7 +39,9 @@
           <h2 class="heading">
             <span class="fas fa-puzzle-piece"></span>Skills
           </h2>
-          <resume-skill v-for="item in skills" :key="item.skill" :skill="item.skill" :rating="item.rating"></resume-skill>
+          <div class="skills">
+            <resume-skill v-for="item in skills" :key="item.skill" :skill="item.skill" :rating="item.rating"></resume-skill>
+          </div>
         </div>
       </div>
     </div>
