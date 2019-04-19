@@ -30,10 +30,7 @@
           <h2 class="heading">
             <span class="fas fa-user"></span>Personal Info
           </h2>
-          <div v-for="item in personalInfo" :key="item.label" class="personal-info">
-            <p class="label">{{item.label}}</p>
-            <p class="">{{item.value}}</p>
-          </div>
+          <personal-info v-for="item in personalInfo" :key="item.label" :value="item"></personal-info>
         </div>
 
         <div class="section">
@@ -51,9 +48,10 @@
 import data from '../assets/data.json'
 import ExperienceItem from './ExperienceItem'
 import ResumeSkill from './ResumeSkill'
+import PersonalInfo from './PersonalInfo'
 
 export default {
-  components: { ExperienceItem, ResumeSkill },
+  components: { ExperienceItem, ResumeSkill, PersonalInfo },
   data() {
     return data
   }

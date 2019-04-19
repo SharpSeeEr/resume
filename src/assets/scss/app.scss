@@ -4,9 +4,15 @@
 /***********************************************************
 Variables
 ***********************************************************/
+$font: 'Roboto', Arial, Helvetica, sans-serif;
 $color: #222;
-$inverse-color: #fff;
+$base-font-size: 14px;
+$line-height: 1.15em;
+$content-line-height: 1.5em;
+$header-font: 'Open Sans', sans-serif;
 $header-color: #003D74;
+
+$inverse-color: #fff;
 
 $gutter: 1rem;
 
@@ -17,18 +23,19 @@ Element styling
 ***********************************************************/
 
 body {
-  font-family: 'Roboto', Arial, Helvetica, sans-serif;
-  font-size: 14px;
+  font-family: $font;
+  font-size: $base-font-size;
+  line-height: $line-height;
 }
 
 p, ul {
-  line-height: 1.5em;
+  line-height: $content-line-height;
 }
 
 %headers {
   font-family: 'Open Sans', sans-serif;
   color: $header-color;
-
+  line-height: $line-height;
 }
 
 h1, h2, h3, h4, h5, h6 {
