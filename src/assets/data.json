@@ -22,8 +22,7 @@
             "Created a loan servicing processing module specific to the clients needs using Python.",
             "Modified Chocolately packages for Keepass and Git to provide custom functionality.  Submitted pull requests were accepted by the maintainers.",
             "Created a custom Clock Picker component for Buefy, a Vue.js component library for the Bulma CSS library, which is now included in the Buefy library.",
-            "Published a NuGet package with Entity Framework classes and extensions used across multiple projects.",
-            ""
+            "Published a NuGet package with Entity Framework classes and extensions used across multiple projects."
           ]
         }
       ]
