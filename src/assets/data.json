@@ -1,7 +1,7 @@
 {
   "name": "Aaron Throckmorton",
   "title": "Senior Software Engineer",
-  "summary": "(Example Summary) Multi-tasking Admin Assistant with +2 years of experience in the retail real-estate industry. Can manage +3 executive schedules. Looking to leverage proven communication, travel planning, and email management skill in the position of Administrative Assistant at Acme.",
+  "summary": "Talented and dedicated full stack developer who is constantly learning new concepts and technologies. Enjoys working with business partners throughout the development lifecycle.  Strong team leader with a natural ability to help team mates solve problems and learn new concepts, as well as learn from those same team members.",
   "personalInfo": [
     { "label": "Phone", "value": "(801) 882-9706" },
     { "label": "E-mail", "value": "aaron@throckmortons.com", "link": "mailto" },
@@ -104,12 +104,15 @@
   ],
   "skills": [
     { "skill": "C#", "rating": 5 },
-    { "skill": "MS SQL Server", "rating": 4 },
-    { "skill": "SCSS", "rating": 4 },
     { "skill": "JavaScript", "rating": 4 },
-    { "skill": "Vue.js", "rating": 4 },
+    { "skill": "SQL", "rating": 4 },
     { "skill": "Python", "rating": 3 },
-    { "skill": "Git", "rating": 3 },
-    { "skill": "Angular", "rating": 1 }
+    { "skill": "HTML, CSS, SCSS, Stylus", "rating": 4 },
+    { "skill": "ASP.Net, ASP.Net Core", "rating": 4},
+    { "skill": "Vue.js", "rating": 4 },
+    { "skill": "Angular", "rating": 1 },
+    { "skill": "MS SQL Server", "rating": 4 },
+    { "skill": "Windows Server", "rating": 4 },
+    { "skill": "Git", "rating": 3 }
   ]
 }

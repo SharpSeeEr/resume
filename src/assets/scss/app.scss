@@ -148,9 +148,6 @@ Resume section formatting
     min-width: 4em;
     max-width: 4em;
     font-weight: bold;
-    > div {
-      // line-height: $xp-position-line-height;
-    }
   }
 
   .details {
@@ -207,6 +204,7 @@ Resume section formatting
 }
 
 .rating-graphic {
+  min-width: 6em;
   div {
     width: 1em;
     height: 1em;
