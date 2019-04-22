@@ -94,6 +94,14 @@
       ]
     }
   ],
+  "education": [
+    {
+      "startYear": "2004",
+      "endYear": "2007",
+      "schoolName": "University of Phoenix",
+      "degree": "B.S. Information Technology"
+    }
+  ],
   "skills": [
     { "skill": "C#", "rating": 5 },
     { "skill": "MS SQL Server", "rating": 4 },

@@ -8,7 +8,7 @@ Variables
 $media-tablet: 768px;
 
 $font: 'Roboto', Arial, Helvetica, sans-serif;
-$base-font-size: 14px;
+$base-font-size: 16px;
 $line-height: 1.15em;
 $content-line-height: 1.5em;
 
@@ -94,15 +94,33 @@ Layout
 .column-main {
   flex-grow: 1;
 }
-.column-side {
-  width: 30%;
+
+
+/***********************************************************
+Resume section formatting
+***********************************************************/
+.header {
+  .name {
+    @extend %headers;
+    font-size: $title-size;
+    margin-bottom: $gutter / 2;
+  }
+
+  .profession {
+    @extend %headers;
+    font-size: $subtitle-size;
+    font-weight: 500;
+    margin-top: 0;
+    margin-bottom: $gutter;
+  }
+
 }
 
 .section {
   margin-top: $vertical-spacing;
 
-  .heading {
-    padding-bottom: .4em;
+  >.title {
+    padding-bottom: .3em;
     border-bottom: 1px solid #ddd;
 
     // Icons in a header are shown in reverse color
@@ -118,52 +136,39 @@ Layout
   }
 }
 
-/***********************************************************
-Resume section formatting
-***********************************************************/
-.title {
-  @extend %headers;
-  font-size: $title-size;
-  margin-bottom: $gutter / 2;
-}
-.subtitle {
-  @extend %headers;
-  font-size: $subtitle-size;
-  font-weight: 500;
-  margin-top: 0;
-  margin-bottom: $gutter;
-}
-
-.experience {
+.entry {
   display: flex;
   // flex-direction: column;
 
-  +.experience {
+  +.entry {
     margin-top: $vertical-spacing;
   }
   .dates {
-    flex-shrink: 1;
+    // flex-shrink: 1;
     min-width: 4em;
     max-width: 4em;
+    font-weight: bold;
     > div {
-      font-weight: bold;
-      line-height: $xp-position-line-height;
+      // line-height: $xp-position-line-height;
     }
   }
 
   .details {
     margin-left: $gutter;
-    .position {
+
+    .title {
       color: $color;
       font-size: 1.4em;
       line-height: $xp-position-line-height;
-      margin-bottom: .25em;
+      margin-bottom: .4em;
     }
-    .company {
+
+    .subtitle {
       font-size: 1.1em;
       font-style: italic;
-      margin-bottom: .75em;
+      margin-bottom: .7em;
     }
+
     ul.description {
         padding-inline-start: 1.5em;
         margin-block-start: 0;
@@ -242,29 +247,31 @@ Resume section formatting
   }
 
   .columns {
-    flex-direction: row;
+    flex-direction: row-reverse;
 
     >.column {
       // padding-left: $gutter;
       // padding-right: $gutter;
       +.column {
-        margin-left: $gutter * 2;
+        margin-right: $gutter * 2;
       }
 
     }
   }
 
+  .column-side {
+    width: 30%;
+  }
 
-
-  .experience {
+  .entry {
     flex-direction: row;
 
-    .dates {
-      min-width: 90px;
-      > div {
-        white-space: nowrap;
-      }
-    }
+    // .dates {
+    //   min-width: 90px;
+    //   > div {
+    //     white-space: nowrap;
+    //   }
+    // }
   }
 }
 
@@ -278,19 +285,24 @@ Resume section formatting
   }
 
   .columns {
-    flex-direction: row;
-
-    >.column {
-      +.column {
-        margin-left: $gutter * 2;
-      }
-
+    flex-direction: row-reverse;
+    .column-side {
+      margin-left: $gutter * 2;
     }
+    // >.column {
+    //   +.column {
+    //     margin-right: .75in;
+    //   }
+
+    // }
   }
 
-  .experience {
+  @page {
+    margin: .5in;
+  }
+  .entry {
     page-break-inside: avoid;
-    orphans: 6;
+    // orphans: 6;
   }
 
   .rating-graphic {
