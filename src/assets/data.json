@@ -5,7 +5,8 @@
   "personalInfo": [
     { "label": "Phone", "value": "(801) 882-9706" },
     { "label": "E-mail", "value": "aaron@throckmortons.com", "link": "mailto" },
-    { "label": "LinkedIn", "value": "linkedin.com/in/aaronthrockmorton/", "link": "https://linkedin.com/in/aaronthrockmorton/" }
+    { "label": "LinkedIn", "value": "linkedin.com/in/aaronthrockmorton/", "link": "https://linkedin.com/in/aaronthrockmorton/" },
+    { "label": "Resume Source", "value": "github.com/SharpSeeEr/resume", "link": "https://github.com/SharpSeeEr/resume" }
   ],
   "experience": [
     {
