@@ -29,19 +29,22 @@
       </div>
 
       <div class="column column-main">
+
         <div class="section">
           <h2 class="title">
             <span class="fas fa-briefcase"></span>Experience
           </h2>
-          <div v-for="(item, index) in experience" :key="index" class="entry">
-            <p class="dates">
-              {{item.startYear}} - {{item.endYear || 'present'}}
-            </p>
-            <div class="details">
-              <h3 class="title">{{item.position}}</h3>
-              <div class="subtitle">{{item.company}}</div>
-              <experience-item v-for="(desc, index) in item.description" :key="index" :value="desc"></experience-item>
-            </div>
+          <div v-for="(item, index) in experience" :key="index" class="entry" :class="{ 'page-break': item.pageBreak }">
+            <template v-if="!item.pageBreak">
+              <p class="dates">
+                {{item.startYear}} - {{item.endYear || 'present'}}
+              </p>
+              <div class="details">
+                <h3 class="title">{{item.position}}</h3>
+                <div class="subtitle">{{item.company}}</div>
+                <experience-item v-for="(desc, index) in item.description" :key="index" :value="desc"></experience-item>
+              </div>
+            </template>
           </div>
         </div>
 

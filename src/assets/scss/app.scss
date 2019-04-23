@@ -136,6 +136,10 @@ Resume section formatting
   }
 }
 
+.page-break {
+  display: none !important;
+}
+
 .entry {
   display: flex;
   // flex-direction: column;
@@ -143,6 +147,7 @@ Resume section formatting
   +.entry {
     margin-top: $vertical-spacing;
   }
+
   .dates {
     // flex-shrink: 1;
     min-width: 4em;
@@ -299,8 +304,15 @@ Resume section formatting
     margin: .5in;
   }
   .entry {
-    page-break-inside: avoid;
+    //page-break-inside: avoid;
     // orphans: 6;
+  }
+
+  .page-break {
+    // page-break-after: always;
+    display: block !important;
+    height: 3em;
+    // clear: left;
   }
 
   .rating-graphic {
