@@ -283,6 +283,9 @@ Resume section formatting
     font-size: 12px;
   }
 
+  .fas {
+    -webkit-print-color-adjust: exact;
+  }
   .container {
     padding: 0;
   }
