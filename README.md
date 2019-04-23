@@ -5,7 +5,7 @@ What better way to maintain a software developer's resume than by creating SPA a
 ## Technologies
 
 * The resume is a [Vue.js app](https://vuejs.org/), created using [Vue Cli](https://cli.vuejs.org/).
-* All styling is done using [SCSS](https://sass-lang.com/).
+* All styling is done using [SCSS](https://sass-lang.com/), and is mobile first responsive.
 * npm is used for managing packages and tasks.
 * All editing was done in [Visual Studio Code](https://code.visualstudio.com/).
 

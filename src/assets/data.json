@@ -18,8 +18,7 @@
         {
           "format": "ul",
           "items": [
-            "Built custom business workflow applications to streamline, manage, and automate business processes.",
-            "Migrated client data from MS Access to MS SQL Server and created a new application interface using ASP.Net Core and Vue.js, streamlining the clients business process.",
+            "Worked with senior management to analyze current loan origination processes. Built an ASP.Net Core and Vue.js application to streamline, manage, and automate them, migrating and converting current loan data from MS Access to MS SQL Server.",
             "Created a loan servicing processing module specific to the clients needs using Python.",
             "Modified Chocolately packages for Keepass and Git to provide custom functionality.  Submitted pull requests were accepted by the maintainers.",
             "Created a custom Clock Picker component for Buefy, a Vue.js component library for the Bulma CSS library, which is now included in the Buefy library.",
