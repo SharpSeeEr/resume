@@ -29,39 +29,8 @@
       </div>
 
       <div class="column column-main">
-
-        <div class="section">
-          <h2 class="title">
-            <span class="fas fa-briefcase"></span>Experience
-          </h2>
-          <div v-for="(item, index) in experience" :key="index" class="entry" :class="{ 'page-break': item.pageBreak }">
-            <template v-if="!item.pageBreak">
-              <p class="dates">
-                {{item.startYear}} - {{item.endYear || 'present'}}
-              </p>
-              <div class="details">
-                <h3 class="title">{{item.position}}</h3>
-                <div class="subtitle">{{item.company}}</div>
-                <experience-item v-for="(desc, index) in item.description" :key="index" :value="desc"></experience-item>
-              </div>
-            </template>
-          </div>
-        </div>
-
-        <div v-if="education" class="section">
-          <h2 class="title">
-            <span class="fas fa-briefcase"></span>Education
-          </h2>
-          <div v-for="(item, index) in education" :key="index" class="entry">
-            <p class="dates">
-              {{item.startYear}} - {{item.endYear || 'present'}}
-            </p>
-            <div class="details">
-              <h3 class="title">{{item.schoolName}}</h3>
-              <div class="subtitle">{{item.degree}}</div>
-            </div>
-          </div>
-        </div>
+        <entry-section icon="briefcase" title="Experience" :entries="experience"></entry-section>
+        <entry-section icon="graduation-cap" title="Education" :entries="education"></entry-section>
       </div>
     </div>
   </div>
@@ -69,12 +38,12 @@
 
 <script>
 import data from '../assets/data.json'
-import ExperienceItem from './ExperienceItem'
+import EntrySection from './EntrySection'
 import ResumeSkill from './ResumeSkill'
 import PersonalInfo from './PersonalInfo'
 
 export default {
-  components: { ExperienceItem, ResumeSkill, PersonalInfo },
+  components: { EntrySection, ResumeSkill, PersonalInfo },
   data() {
     return data
   }

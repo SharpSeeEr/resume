@@ -12,8 +12,8 @@
     {
       "startYear": "2017",
       "endYear": "",
-      "company": "SharpSeer Group, Inc.",
-      "position": "Senior Software Development Engineer",
+      "title": "Senior Software Development Engineer",
+      "subtitle": "SharpSeer Group, Inc.",
       "description": [
         {
           "format": "ul",
@@ -30,8 +30,8 @@
     {
       "startYear": "2011",
       "endYear": "2017",
-      "company": "Wells Fargo Bank, N. A.",
-      "position": "Senior Developer",
+      "title": "Senior Developer",
+      "subtitle": "Wells Fargo Bank, N. A.",
       "description": [
         {
           "format": "ul",
@@ -52,8 +52,8 @@
     {
       "startYear": "2008",
       "endYear": "2011",
-      "company": "Wells Fargo Securities",
-      "position": "Systems Administrator",
+      "title": "Systems Administrator",
+      "subtitle": "Wells Fargo Securities",
       "description": [
         {
           "format": "ul",
@@ -69,8 +69,8 @@
     {
       "startYear": "1999",
       "endYear": "2008",
-      "company": "Wells Fargo Bank & Company",
-      "position": "Systems Engineer",
+      "title": "Systems Engineer",
+      "subtitle": "Wells Fargo Bank & Company",
       "description": [
         {
           "format": "ul",
@@ -84,8 +84,8 @@
     {
       "startYear": "1992",
       "endYear": "1999",
-      "company": "United States Air Force",
-      "position": "Computer Maintenance Technician",
+      "title": "Computer Maintenance Technician",
+      "subtitle": "United States Air Force",
       "description": [
         {
           "format": "ul",
@@ -101,8 +101,8 @@
     {
       "startYear": "2004",
       "endYear": "2007",
-      "schoolName": "University of Phoenix",
-      "degree": "B.S. Information Technology"
+      "title": "University of Phoenix",
+      "subtitle": "B.S. Information Technology"
     }
   ],
   "skills": [
