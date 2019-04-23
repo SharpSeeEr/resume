@@ -95,15 +95,14 @@ Layout
   flex-grow: 1;
 }
 
-
 /***********************************************************
-Resume section formatting
+Resume sections
 ***********************************************************/
 .header {
   .name {
     @extend %headers;
     font-size: $title-size;
-    margin-bottom: $gutter / 2;
+    margin-bottom: .5rem;
   }
 
   .profession {
@@ -111,9 +110,8 @@ Resume section formatting
     font-size: $subtitle-size;
     font-weight: 500;
     margin-top: 0;
-    margin-bottom: $gutter;
+    margin-bottom: 1rem;
   }
-
 }
 
 .section {
@@ -136,20 +134,17 @@ Resume section formatting
   }
 }
 
-.page-break {
-  display: none !important;
-}
-
+/***********************************************************
+Components
+***********************************************************/
 .entry {
   display: flex;
-  // flex-direction: column;
 
   +.entry {
     margin-top: $vertical-spacing;
   }
 
   .dates {
-    // flex-shrink: 1;
     min-width: 4em;
     max-width: 4em;
     font-weight: bold;
@@ -157,25 +152,25 @@ Resume section formatting
 
   .details {
     margin-left: $gutter;
+  }
 
-    .title {
-      color: $color;
-      font-size: 1.4em;
-      line-height: $xp-position-line-height;
-      margin-bottom: .4em;
-    }
+  .title {
+    color: $color;
+    font-size: 1.4em;
+    line-height: $xp-position-line-height;
+    margin-bottom: .4em;
+  }
 
-    .subtitle {
-      font-size: 1.1em;
-      font-style: italic;
-      margin-bottom: .7em;
-    }
+  .subtitle {
+    font-size: 1.1em;
+    font-style: italic;
+    margin-bottom: .7em;
+  }
 
-    ul.description {
-        padding-inline-start: 1.5em;
-        margin-block-start: 0;
-        margin-block-end: 0;
-    }
+  ul.description {
+      padding-inline-start: 1.5em;
+      margin-block-start: 0;
+      margin-block-end: 0;
   }
 }
 
@@ -251,31 +246,17 @@ Resume section formatting
 
   .columns {
     flex-direction: row-reverse;
-
-    >.column {
-      // padding-left: $gutter;
-      // padding-right: $gutter;
-      +.column {
-        margin-right: $gutter * 2;
-      }
-
-    }
   }
 
   .column-side {
+    margin-left: $gutter * 2;
     width: 30%;
   }
+}
 
-  .entry {
-    flex-direction: row;
-
-    // .dates {
-    //   min-width: 90px;
-    //   > div {
-    //     white-space: nowrap;
-    //   }
-    // }
-  }
+/* Page-Break Hack */
+.page-break {
+  display: none !important;
 }
 
 @media print {
@@ -295,27 +276,16 @@ Resume section formatting
     .column-side {
       margin-left: $gutter * 2;
     }
-    // >.column {
-    //   +.column {
-    //     margin-right: .75in;
-    //   }
-
-    // }
   }
 
   @page {
     margin: .5in;
   }
-  .entry {
-    //page-break-inside: avoid;
-    // orphans: 6;
-  }
 
+  /* This is a hack! Until I figure out how to properly page break within a flex column */
   .page-break {
-    // page-break-after: always;
     display: block !important;
     height: 3em;
-    // clear: left;
   }
 
   .rating-graphic {
