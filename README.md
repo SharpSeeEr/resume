@@ -1,29 +1,21 @@
-# resume
+# Personal Resume for Aaron Throckmorton (SharpSeeEr)
+
+What better way to maintain a software developer's resume than by creating SPA and using Git?
+
+## Technologies
+
+* The resume is a [Vue.js app](https://vuejs.org/), created using [Vue Cli](https://cli.vuejs.org/).
+* All styling is done using [SCSS](https://sass-lang.com/).
+* npm is used for managing packages and tasks.
+* All editing was done in [Visual Studio Code](https://code.visualstudio.com/).
 
 ## Project setup
-```
-npm install
-```
 
-### Compiles and hot-reloads for development
-```
+To run the app locally:
+
+```cmd
+git clone https://github.com/SharpSeeEr/resume.git
+cd resume
+npm install
 npm run serve
 ```
-
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Run your tests
-```
-npm run test
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
