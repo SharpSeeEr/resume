@@ -3,7 +3,7 @@
 
 setlocal
 
-npm run build
+call npm run build
 
 cd dist
 
