@@ -50,7 +50,7 @@ export default {
   },
   computed: {
     company() {
-      return this.$route.params.company || ''
+      return (this.$route.params.company || '').toLowerCase()
     },
     companyOverrides() {
       return this.overrides[this.company] || {}

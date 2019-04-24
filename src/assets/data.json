@@ -3,7 +3,7 @@
   "title": "Senior Software Engineer",
   "summary": "Talented and dedicated full stack developer who is constantly learning new concepts and technologies. Enjoys working with business partners throughout the development lifecycle to ensure requirements are met.  Strong team leader with a natural ability to help team mates solve problems and learn new concepts, as well as learn from those same team members.",
   "overrides": {
-    "AdvancedMD": {
+    "advancedmd": {
       "summary": "Talented and dedicated full stack developer who is constantly learning new concepts and technologies and is knowledgeable in system operation and application interaction. Enjoys working with business partners throughout the development lifecycle to ensure requirements are met.  Strong team leader with a natural ability to help team mates solve problems and learn new concepts, as well as learn from those same team members.",
       "skills": [
         { "skill": "Visual Studio", "rating": 4 }
