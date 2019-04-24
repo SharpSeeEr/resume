@@ -27,7 +27,7 @@ $vertical-spacing: 1.5em;
 $title-size: 3em;
 $subtitle-size: 1.7em;
 
-$debug-border: 0px solid #0c0;
+$debug-border: 1px solid #0c0;
 
 $xp-position-line-height: 1.5rem;
 
@@ -115,11 +115,13 @@ Resume sections
 }
 
 .section {
-  margin-top: $vertical-spacing;
+  margin-top: 18px;
 
   >.title {
     padding-bottom: .3em;
     border-bottom: 1px solid #ddd;
+    white-space: nowrap;
+    margin-bottom: .3em;
 
     // Icons in a header are shown in reverse color
     .far, .fas {
@@ -139,10 +141,10 @@ Components
 ***********************************************************/
 .entry {
   display: flex;
-
-  +.entry {
-    margin-top: $vertical-spacing;
-  }
+  padding: 6px 0;
+  // +.entry {
+  //   margin-top: $vertical-spacing;
+  // }
 
   .dates {
     min-width: 4em;
@@ -176,7 +178,7 @@ Components
 
 .personal-info {
   +.personal-info {
-    margin-top: $gutter;
+    margin-top: .5em;
   }
   p {
     margin: 0;
@@ -184,6 +186,9 @@ Components
   .label {
     font-weight: bold;
     margin-bottom: .2em;
+  }
+  .long-link {
+    font-size: .8em;
   }
 }
 
@@ -255,6 +260,10 @@ Components
   }
 }
 
+.print-only, .print-only-urla {
+  display: none;
+}
+
 /* Page-Break Hack */
 .page-break {
   display: none !important;
@@ -263,6 +272,15 @@ Components
 @media print {
   body {
     font-size: 12px;
+  }
+
+  .print-only {
+    display: block;
+  }
+
+  .print-only-url {
+    display: block;
+    // margin-top: 3em;
   }
 
   .fas, .rating-graphic {
@@ -286,11 +304,15 @@ Components
   /* This is a hack! Until I figure out how to properly page break within a flex column */
   .page-break {
     display: block !important;
-    height: 0em;
+    height: 5.5em;
   }
 
   .rating-graphic {
     // display: none;
     min-width: 6.5em;
   }
+}
+
+.debug-border {
+  border: $debug-border;
 }

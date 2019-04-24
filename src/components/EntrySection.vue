@@ -5,9 +5,7 @@
     </h2>
     <div v-for="(item, index) in entries" :key="index" class="entry" :class="{ 'page-break': item.pageBreak }">
       <template v-if="!item.pageBreak">
-        <p class="dates">
-          {{item.startYear}} - {{item.endYear || 'present'}}
-        </p>
+        <p class="dates">{{item.startYear}} - {{item.endYear || 'present'}}</p>
         <div class="details">
           <h3 class="title">{{item.title}}</h3>
           <div class="subtitle">{{item.subtitle}}</div>

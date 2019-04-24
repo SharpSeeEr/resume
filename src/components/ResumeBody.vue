@@ -16,6 +16,8 @@
             <span class="fas fa-user"></span>Personal Info
           </h2>
           <personal-info v-for="item in personalInfo" :key="item.label" :value="item"></personal-info>
+          <!-- eslint-disable-next-line -->
+          <personal-info class="print-only long-link" :value="{label: 'Viewable Online', value: onlineLink, cssClass: 'long-link'}"></personal-info>
         </div>
 
         <div class="section">
@@ -38,6 +40,8 @@
 </template>
 
 <script>
+/* eslint-disable no-irregular-whitespace */
+
 import data from '../assets/data.json'
 import EntrySection from './EntrySection'
 import ResumeSkill from './ResumeSkill'
@@ -60,6 +64,13 @@ export default {
     },
     companySkills() {
       return this.companyOverrides.skills
+    },
+    onlineLink() {
+      let param = this.$route.params.company || ''
+      if (param) {
+        param = `#/${param}`
+      }
+      return `https://sharpseeer.github.io/​resume/${param}`
     }
   }
 }

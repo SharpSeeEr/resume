@@ -1,7 +1,7 @@
 <template>
   <div class="personal-info">
     <p class="label">{{value.label}}</p>
-    <p>
+    <p :class="value.cssClass">
       <a v-if="value.link" :target="targetWindow" :href="href">{{value.value}}</a>
       <template v-else>{{value.value}}</template>
     </p>
