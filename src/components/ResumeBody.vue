@@ -4,7 +4,7 @@
       <h1 class="name">{{name}}</h1>
       <h2 class="profession">{{title}}</h2>
       <p class="summary">
-        {{summary}}
+        {{companySummary}}
       </p>
     </div>
 
@@ -46,6 +46,12 @@ export default {
   components: { EntrySection, ResumeSkill, PersonalInfo },
   data() {
     return data
+  },
+  computed: {
+    companySummary() {
+      let company = this.$route.params.company || ''
+      return this.overrides[company] && this.overrides[company].summary ? this.overrides[company].summary : this.summary
+    }
   }
 }
 </script>
