@@ -1,10 +1,13 @@
 {
   "name": "Aaron Throckmorton",
   "title": "Senior Software Engineer",
-  "summary": "Talented and dedicated full stack developer who is constantly learning new concepts and technologies. Enjoys working with business partners throughout the development lifecycle.  Strong team leader with a natural ability to help team mates solve problems and learn new concepts, as well as learn from those same team members.",
+  "summary": "Talented and dedicated full stack developer who is constantly learning new concepts and technologies. Enjoys working with business partners throughout the development lifecycle to ensure requirements are met.  Strong team leader with a natural ability to help team mates solve problems and learn new concepts, as well as learn from those same team members.",
   "overrides": {
-    "CompanyName": {
-      "summary": ""
+    "AdvancedMD": {
+      "summary": "Talented and dedicated full stack developer who is constantly learning new concepts and technologies and is knowledgeable in system operation and application interaction. Enjoys working with business partners throughout the development lifecycle to ensure requirements are met.  Strong team leader with a natural ability to help team mates solve problems and learn new concepts, as well as learn from those same team members.",
+      "skills": [
+        { "skill": "Visual Studio", "rating": 4 }
+      ]
     }
   },
   "personalInfo": [
@@ -41,11 +44,12 @@
         {
           "format": "ul",
           "items": [
-            "Designed, developed, maintained, and supported 4 large internal web applications for the IT support group",
-            "Provide guidance to other developers on team, teaching programming patterns, anti-patterns, and dubugging techniques, and giving general help and direction",
+            "Designed, developed, maintained, and supported 4 large internal web applications for the IT support group.",
+            "Provide guidance to other developers on team, teaching programming patterns, anti-patterns, and dubugging techniques, and giving general help and direction.",
             "Led weekly and as needed development team meetings to review code and provide help to team mates.",
             "Designed and developed an IT server management system to manage over 30,000 Windows servers. A set of backend services updated system information and deployed configuration and change jobs. A web front end provided IT techs to view server information, create jobs to make changes, and review the results of those jobs.",
             "Developed an application to consolidate asset information from several separate sources enabling access to all data from one interface.",
+            "Identified and optimized SQL query operations from custom queries and those generated from Entity Framework.",
             "Created a change management system for end users to request updates to asset data.  The application requested approval from appropriate parties before automatically applying the changes, replacing a manual tracking process requiring several weeks per change, with the new system requiring only a few days."
           ]
         }
@@ -81,7 +85,7 @@
           "format": "ul",
           "items": [
             "Responsible for designing, sizing, and installing systems for assigned projects, and ensuring tech personnel received proper training for supporting them.",
-            "Escalation point for over 40 on site technicians located across 15 locations"
+            "Escalation point for over 40 on site technicians located across 15 locations."
           ]
         }
       ]

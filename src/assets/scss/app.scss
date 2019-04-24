@@ -205,11 +205,12 @@ Components
 
 .rating-graphic {
   min-width: 6em;
+  align-self: flex-end;
   div {
     width: 1em;
     height: 1em;
     display: inline-block;
-    margin-right: 3px;
+    margin-left: 3px;
     background-color: #ddd;
   }
   @include ratingblock(one, 1);
@@ -264,7 +265,7 @@ Components
     font-size: 12px;
   }
 
-  .fas {
+  .fas, .rating-graphic {
     -webkit-print-color-adjust: exact;
   }
   .container {
@@ -285,10 +286,11 @@ Components
   /* This is a hack! Until I figure out how to properly page break within a flex column */
   .page-break {
     display: block !important;
-    height: 3em;
+    height: 0em;
   }
 
   .rating-graphic {
-    display: none;
+    // display: none;
+    min-width: 6.5em;
   }
 }

@@ -24,6 +24,7 @@
           </h2>
           <div class="skills">
             <resume-skill v-for="item in skills" :key="item.skill" :skill="item.skill" :rating="item.rating"></resume-skill>
+            <resume-skill v-for="item in companyOverrides.skills" :key="item.skill" :skill="item.skill" :rating="item.rating"></resume-skill>
           </div>
         </div>
       </div>
@@ -48,9 +49,17 @@ export default {
     return data
   },
   computed: {
+    company() {
+      return this.$route.params.company || ''
+    },
+    companyOverrides() {
+      return this.overrides[this.company] || {}
+    },
     companySummary() {
-      let company = this.$route.params.company || ''
-      return this.overrides[company] && this.overrides[company].summary ? this.overrides[company].summary : this.summary
+      return this.overrides[this.company] && this.overrides[this.company].summary ? this.overrides[this.company].summary : this.summary
+    },
+    companySkills() {
+      return this.companyOverrides.skills
     }
   }
 }
