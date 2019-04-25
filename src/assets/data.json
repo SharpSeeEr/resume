@@ -8,6 +8,15 @@
       "skills": [
         { "skill": "Visual Studio", "rating": 4 }
       ]
+    },
+    "cybercoders": {
+      "summary": "Talented and dedicated ASP.Net full stack developer who is constantly learning new concepts and technologies. Enjoys working with business partners throughout the development lifecycle to ensure requirements are met.  Strong team leader with a natural ability to help team mates solve problems and learn new concepts, as well as learn from those same team members."
+    },
+    "stg": {
+      "summary": "Talented and dedicated ASP.Net full stack developer who is constantly learning new concepts and technologies. Enjoys working with business partners throughout the development lifecycle to ensure requirements are met.  Strong team leader with a natural ability to help team mates solve problems and learn new concepts, as well as learn from those same team members.",
+      "skills": [
+        { "skill": "Visual Studio", "rating": 4 }
+      ]
     }
   },
   "personalInfo": [
@@ -117,7 +126,7 @@
   "skills": [
     { "skill": "C#", "rating": 5 },
     { "skill": "JavaScript", "rating": 4 },
-    { "skill": "SQL", "rating": 4 },
+    { "skill": "T-SQL", "rating": 4 },
     { "skill": "Python", "rating": 3 },
     { "skill": "HTML, CSS, SCSS, Stylus", "rating": 4 },
     { "skill": "ASP.Net, ASP.Net Core", "rating": 4},
