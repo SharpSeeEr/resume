@@ -10,6 +10,11 @@ What better way to maintain a software developer's resume than by creating SPA a
 * npm is used for managing packages and tasks.
 * All editing was done in [Visual Studio Code](https://code.visualstudio.com/).
 
+## Features
+
+* The summary and skill section can be customized/overidden by adding a profile to the overrides section in the data file.  Specifying that profile name in the url shows the customized version.
+* The printed version contains an additional link in the Personal Info section to view the custom version online.
+
 ## Project setup
 
 To run the app locally:
