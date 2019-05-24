@@ -1,22 +1,19 @@
 {
   "name": "Aaron Throckmorton",
   "title": "Senior Software Engineer",
-  "summary": "Talented and dedicated full stack developer who is constantly learning new concepts and technologies. Enjoys working with business partners throughout the development lifecycle to ensure requirements are met.  Strong team leader with a natural ability to help team mates solve problems and learn new concepts, as well as learn from those same team members.",
+  "summary": "Talented and dedicated full stack developer who is constantly learning new concepts and technologies and is knowledgeable in system operation and application interaction. Enjoys working with business partners throughout the development lifecycle to ensure requirements are met.  Strong team leader with a natural ability to help team mates solve problems and learn new concepts, as well as learn from those same team members.",
   "overrides": {
     "advancedmd": {
-      "summary": "Talented and dedicated full stack developer who is constantly learning new concepts and technologies and is knowledgeable in system operation and application interaction. Enjoys working with business partners throughout the development lifecycle to ensure requirements are met.  Strong team leader with a natural ability to help team mates solve problems and learn new concepts, as well as learn from those same team members.",
-      "skills": [
-        { "skill": "Visual Studio", "rating": 4 }
-      ]
+      "summary": "Talented and dedicated full stack developer who is constantly learning new concepts and technologies and is knowledgeable in system operation and application interaction. Enjoys working with business partners throughout the development lifecycle to ensure requirements are met.  Strong team leader with a natural ability to help team mates solve problems and learn new concepts, as well as learn from those same team members."
     },
     "cybercoders": {
       "summary": "Talented and dedicated ASP.Net full stack developer who is constantly learning new concepts and technologies. Enjoys working with business partners throughout the development lifecycle to ensure requirements are met.  Strong team leader with a natural ability to help team mates solve problems and learn new concepts, as well as learn from those same team members."
     },
     "stg": {
-      "summary": "Talented and dedicated ASP.Net full stack developer who is constantly learning new concepts and technologies. Enjoys working with business partners throughout the development lifecycle to ensure requirements are met.  Strong team leader with a natural ability to help team mates solve problems and learn new concepts, as well as learn from those same team members.",
-      "skills": [
-        { "skill": "Visual Studio", "rating": 4 }
-      ]
+      "summary": "Talented and dedicated ASP.Net full stack developer who is constantly learning new concepts and technologies. Enjoys working with business partners throughout the development lifecycle to ensure requirements are met.  Strong team leader with a natural ability to help team mates solve problems and learn new concepts, as well as learn from those same team members."
+    },
+    "cricut": {
+      "summary": "Talented and dedicated ASP.Net full stack developer who is constantly learning new concepts and technologies. Enjoys working with business partners throughout the development lifecycle to ensure requirements are met.  Strong team leader with a natural ability to help team mates solve problems and learn new concepts, as well as learn from those same team members."
     }
   },
   "personalInfo": [
@@ -134,6 +131,7 @@
     { "skill": "Angular", "rating": 1 },
     { "skill": "MS SQL Server", "rating": 4 },
     { "skill": "Windows Server", "rating": 4 },
-    { "skill": "Git", "rating": 3 }
+    { "skill": "Git", "rating": 3 },
+    { "skill": "Visual Studio", "rating": 4 }
   ]
 }
